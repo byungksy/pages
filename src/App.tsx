@@ -1,8 +1,9 @@
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 
 // 페이지 컴포넌트들
-function Home() {
+const Home: React.FC = () => {
   return (
     <div className="page">
       <h1>🏠 홈페이지</h1>
@@ -14,7 +15,7 @@ function Home() {
   )
 }
 
-function About() {
+const About: React.FC = () => {
   return (
     <div className="page">
       <h1>ℹ️ 소개</h1>
@@ -32,7 +33,7 @@ function About() {
   )
 }
 
-function Contact() {
+const Contact: React.FC = () => {
   return (
     <div className="page">
       <h1>📞 연락처</h1>
@@ -49,7 +50,7 @@ function Contact() {
   )
 }
 
-function NotFound() {
+const NotFound: React.FC = () => {
   return (
     <div className="page">
       <h1>❌ 404 - 페이지를 찾을 수 없습니다</h1>
@@ -61,7 +62,7 @@ function NotFound() {
   )
 }
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router basename="/pages">
       <div className="app">
@@ -95,4 +96,4 @@ function App() {
   )
 }
 
-export default App
+export default App 
