@@ -1,6 +1,6 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import './App.css'
+import type React from 'react';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import './App.css';
 
 // 페이지 컴포넌트들
 const Home: React.FC = () => {
@@ -12,8 +12,8 @@ const Home: React.FC = () => {
         <p>이 페이지는 GitHub Pages에서 정상적으로 동작합니다.</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const About: React.FC = () => {
   return (
@@ -30,8 +30,8 @@ const About: React.FC = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Contact: React.FC = () => {
   return (
@@ -47,8 +47,8 @@ const Contact: React.FC = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const NotFound: React.FC = () => {
   return (
@@ -56,11 +56,13 @@ const NotFound: React.FC = () => {
       <h1>❌ 404 - 페이지를 찾을 수 없습니다</h1>
       <p>요청하신 페이지가 존재하지 않습니다.</p>
       <div className="card">
-        <Link to="/" className="button">홈으로 돌아가기</Link>
+        <Link to="/" className="button">
+          홈으로 돌아가기
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const App: React.FC = () => {
   return (
@@ -72,9 +74,15 @@ const App: React.FC = () => {
               🚀 React App
             </Link>
             <div className="nav-links">
-              <Link to="/" className="nav-link">홈</Link>
-              <Link to="/about" className="nav-link">소개</Link>
-              <Link to="/contact" className="nav-link">연락처</Link>
+              <Link to="/" className="nav-link">
+                홈
+              </Link>
+              <Link to="/about" className="nav-link">
+                소개
+              </Link>
+              <Link to="/contact" className="nav-link">
+                연락처
+              </Link>
             </div>
           </div>
         </nav>
@@ -93,7 +101,7 @@ const App: React.FC = () => {
         </footer>
       </div>
     </Router>
-  )
-}
+  );
+};
 
-export default App 
+export default App;
